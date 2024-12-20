@@ -2,14 +2,17 @@
   "expo": {
     "name": "pasaley",
     "slug": "pasaley",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#f83758"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
     },
     "assetBundlePatterns": [
       "**/*"
@@ -18,13 +21,31 @@
       "supportsTablet": true
     },
     "android": {
+      "package": "com.pasaley.pasaley",
+      "versionCode": 1,
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "foregroundImage": "./assets/icon.png",
+        "backgroundColor": "#f83758"
       }
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "0d765d23-98d4-4c09-8aac-884de1b0d68a"
+      }
+    },
+    "plugins": [
+      [
+        "expo-build-properties",
+        {
+          "android":{
+            "usesCleartextTraffic":true
+          }
+        }
+      ]
+     
+    ]
   }
 }
